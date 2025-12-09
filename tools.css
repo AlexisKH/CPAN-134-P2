@@ -1,0 +1,39 @@
+.tools{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+}
+table{
+    border-collapse: collapse;
+    margin: 0 auto;
+    
+}
+table, th, td{
+    border: 1px solid white;
+}
+
+caption{
+    font-size: 1.5rem;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+
+th{
+    color:  rgb(121, 208, 121);;
+}
+
+tr {
+    background-color: rgb(66,66,66);
+}
+tr:hover{
+    background-color:  rgb(57, 109, 57);
+}
+
+img{
+    height: 70px;
+    width: 70px;
+}

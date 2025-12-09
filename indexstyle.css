@@ -1,0 +1,235 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+        "banner banner"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100%;
+}
+
+/* Banner */
+.banner{
+    grid-area: banner;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/hades2banner.webp");
+    background-size: cover;
+    background-position: center;
+    height: 550px;
+    position: relative;
+}
+
+.banner h1{
+    margin-top: 0;
+    position: absolute;
+    font-size: 8rem;
+    color: rgb(121, 208, 121);
+    text-align: center;
+    letter-spacing: 4.5rem;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Sidebar */
+.sidebar{
+   width: 160px;
+   background-color: black;
+   float: left;
+   height: 100%;
+   box-sizing: border-box;
+   padding: 1rem 0;
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidebar li{
+    margin: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.sidebar a{
+    color: rgb(121, 208, 121);
+    text-decoration: none;
+}
+
+.sidebar a:hover{
+    color: white;
+}
+
+
+/* Main */
+.main{
+    grid-area: main;
+    background-color: rgb(36, 39, 39);
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.main p{
+    text-align: center;
+}
+
+.pop-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 90%;
+    background: rgb(66, 66, 66);
+    border-radius: 0.5rem;
+}
+
+.pop-page{
+    float: left;
+    width: auto;
+    min-width: 250px;
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.pop-page img{
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    max-width: 140px;
+}
+
+.pop-page img:hover{
+    transform: scale(1.1);
+}
+
+.pop-page h3{
+    text-align: center;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    color: rgb(121, 208, 121);
+}
+
+
+/** SLIDESHOW **/
+.slideshow-container{
+    position: relative;
+    margin: auto;
+    max-width: 60%;
+}
+
+.slide{
+    display: none;
+}
+.slide img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.caption{
+    text-align: center;
+}
+
+.number{
+    position: absolute;
+    top: 0;
+
+}
+
+/* Footer */
+.footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(82, 146, 82);
+    color: black;
+    padding: 1rem;
+    
+}
+
+.footer a:hover{
+    color: white;
+}
+
+.section-footer{
+    text-align: center;
+    float: left;
+    width: 30%;
+}
+
+.section-footer h3{
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.section-footer ul{
+    list-style: none;
+    padding: 0;
+}
+
+.section-footer li{
+    margin: 0.7rem;
+}
+
+.section-footer a{
+    color: black;
+}
+
+/* Mobile Screens*/
+@media screen and (max-width: 768px) {
+    .banner{
+        height: 350px;
+    }
+
+    .banner h1{
+        font-size: 4rem;
+        letter-spacing: .5rem;
+    }
+}
+
+/* Desktop Screens*/
+@media screen and (max-width: 1080px) {
+    .banner{
+        height: 550px;
+    }
+
+    .banner h1{
+        font-size: 6rem;
+        letter-spacing: 2.5rem;
+    }
+
+}
